@@ -51,8 +51,7 @@ docker run \
 
 Send a push to the registered client, and it will show up in the topic in NTFY!
 
-## Running in docker compose Docker Compose
-
+## Running in docker compose
 
 ```yaml
 service:
