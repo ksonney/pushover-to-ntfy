@@ -5,4 +5,11 @@ if [ ! -e /etc/ntfy/client.yml ]; then
 	exit 1
 fi
 cd /opt/push-watch
-push-watch watch ${PUSHOVER_ID} ${PUSHOVER_SECRET} -- sh -c send-to-ntfy
+case ${1} in
+	login)
+		push-watch login ${2} ${3}
+		;;
+	*)
+		push-watch watch ${PUSHOVER_ID} ${PUSHOVER_SECRET} -- sh -c send-to-ntfy
+		;;
+esac
