@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a simple project that allows sending of pushover messages to nfty. It 
+This is a simple project that allows sending of pushover messages to ntfy. It 
 utilizes push-watch and the ntfy command line client to do so. This Repository
 contains: 
 
