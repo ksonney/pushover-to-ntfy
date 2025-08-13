@@ -1,0 +1,2 @@
+#!/bin/sh
+NTFY_TOPIC=${PUSH_TOPIC} /usr/local/bin/ntfy pub -t "${PUSHOVER_TITLE}" -m "${PUSHOVER_MESSAGE}"
