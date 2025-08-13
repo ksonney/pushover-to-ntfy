@@ -35,7 +35,10 @@ register a client run
 
 `docker run --rm ksonney/pushover-to-ntfy login username password`
 
-This will return the ID and Secret needed. Store those somewhere save, and then run
+This will return the ID and Secret needed. Store those somewhere safe, you'll need them
+at run time
+
+## Running Standalone
 
 ```
 docker run \
@@ -48,9 +51,8 @@ docker run \
 
 Send a push to the registered client, and it will show up in the topic in NTFY!
 
-## Docker Compose
+## Running in docker compose Docker Compose
 
-If you wish to run the container in a docker compose stack, the syntax is
 
 ```yaml
 service:
