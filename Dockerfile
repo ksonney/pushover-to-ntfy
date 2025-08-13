@@ -1,6 +1,7 @@
 FROM ubuntu:jammy
 USER root
 RUN mkdir /opt/ntfy /opt/push-watch /etc/ntfy
+VOLUME ["/etc/ntfy"]
 RUN apt update && apt install -y ca-cacert certinfo 
 WORKDIR /opt/ntfy
 ENV NTFY_VER=2.14.0
@@ -14,9 +15,8 @@ RUN chmod a+x /usr/local/bin/push-watch
 
 WORKDIR /
 ADD send-to-ntfy /opt/push-watch/send-to-ntfy
-COPY startup.sh /startup.sh
+ADD startup.sh /startup.sh
 
-VOLUME ["/etc/ntfy"]
 RUN chown -R root:root /usr/local/bin && chmod -R 755 /startup.sh /usr/local/bin /opt/push-watch/send-to-ntfy
 
 ENTRYPOINT ["/bin/sh","/startup.sh" ]
