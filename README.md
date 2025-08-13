@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This is a simple project that allows sending of pushover messages to ntfy. It 
+This is a simple project that allows sending of pushover messages to ntfy.sh. It 
 utilizes push-watch and the ntfy command line client to do so. This Repository
 contains: 
 
  - The Dockerfile to build it
  - startup.sh to run push-watch
- - send-to-ntfy to take the message from push-watch to ntfy
+ - send-to-ntfy to take the message from push-watch to ntfy.sh
  - build.sh which is what I use to make the container
  - This document
 
@@ -65,3 +65,8 @@ service:
       - ./config:/etc/ntfy
 ```
 
+## More information
+
+ - [Pushover](https://pushover.net)
+ - [ntfy.sh](https://ntfy.sh/)
+ - [push-watch](https://github.com/hrntknr/push-watch)
